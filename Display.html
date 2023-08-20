@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel="stylesheet" href="displayCSS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="light">
+            <div class="head"></div>
+            <div class="wire"></div>
+            <div id="bulb">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="air-conditioner">
+            
+            <div class="ac-outer">
+                <div class="ac-label">Power</div>
+                <div class="ac-screen ac-screen-main"></div>
+
+                <div class="ac-label">Temperature</div>
+                <div class="ac-screen ac-screen-temperature">
+                    <div class="ac-status">0°C</div>
+                </div>
+                <div class="ac-label">Timer</div>
+                <div class="ac-screen ac-screen-timer">
+                    <div class="ac-status" id="acTimerStatus">0</div>
+                </div>
+            </div>
+          </div>
+    
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+   <script src="displayJS.js"></script>
+</body>
+
+</html>

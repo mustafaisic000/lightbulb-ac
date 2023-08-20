@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrola</title>
+    <link rel="stylesheet" href="kontrolerCSS.css">
+</head>
+<body>
+    <div class="Controls">
+        <div class="LightBulb">
+            <h3 class="device-title">Light bulb</h3>
+            <button class="Lightbulb-btn" onclick="upaliSvjetlo()"></button>
+            <div class="LightBulb-slider-control">
+                <input type="range" min="0" max="100" class="slider" id="brightnessRange" onchange="promjeniSvjetlinu(this)">
+                <p class="slider-label" id="brightnessLabel">Brightness: 50%</p>
+            </div>
+            <div class="timer-control">
+                <label for="lightTimer">Timer (up to 6 hours):</label>
+                <input type="number" id="lightTimer" min="0" max="21600" step="1" placeholder="seconds">
+                <button class="button" id="startLightTimer" onclick="ugasiSvjetloTimed()">Start Timer</button>
+                <p class="timer-label" id="lightTimerLabel"></p>
+            </div>
+            <p id="timerDisplay"></p>
+        </div>
+        <div class="AirConditioner">
+            <h3 class="device-title">Air Conditioner</h3>
+            <button class="AirConditioner-btn" onclick="upaliKlimu()"></button>
+            <div class="AC-slider-control">
+                <input type="range" min="0" max="100" class="slider" id="temperatureRange" onchange="promjeniTemperaturu(this)">
+                <p class="slider-label" id="temperatureLabel">Temperature: 25°C</p>
+            </div>
+            <div class="timer-control">
+                <label for="acTimer">Timer (up to 6 hours):</label>
+                <input type="number" id="acTimer" min="0" max="21600" step="1" placeholder="seconds">
+                <button class="button" id="startAcTimer" onclick="ugasiKlimuTimer()">Start Timer</button>
+                <p class="timer-label" id="acTimerLabel"></p>
+            </div>
+            <p id="timerDisplayKlima"></p>
+        </div>
+        
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="kontrolerJS.js"></script>
+</body>
+</html>
